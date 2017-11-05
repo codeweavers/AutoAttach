@@ -1,0 +1,33 @@
+<idea-plugin>
+  <id>net.codeweavers.rider.autoattach</id>
+  <name>AutoAttach</name>
+  <version>1.0</version>
+  <vendor email="support@codeweavers.net" url="Codeweavers Ltd."></vendor>
+
+  <description><![CDATA[
+      Attempts to attach the debugger to a process with details similar to the current Solution. Currently simple string contains project name on command line of the process.
+    ]]></description>
+
+  <change-notes><![CDATA[
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="145.0"/>
+
+  <depends>com.intellij.modules.lang</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <action id="AutoAttach" class="AutoAttachAction"
+            text="AutoAttach"
+            description="Attempts to attach the debugger to a process with similar details.">
+      <add-to-group group-id="ToolsMenu" anchor="first"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt P"/>
+    </action>
+  </actions>
+
+</idea-plugin>
